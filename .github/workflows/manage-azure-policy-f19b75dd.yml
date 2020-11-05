@@ -1,0 +1,55 @@
+name: manage-azure-policy-f19b75dd
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**'
+#      - 'policies/Azure_Backup_should_be_enabled_for_Virtual_Machines_013e242c-8828-4970-87b3-ab247555486d/**'
+#      - 'policies/Cognitive_Services_accounts_should_restrict_network_access_037eea7a-bd0a-46c5-9a66-03aea78705d3/**'
+#      - 'policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**'
+#      - 'policies/Audit_Linux_machines_that_have_the_specified_applications_installed_0447bc18-e2f7-4c0d-aa20-bff034275be1/**'
+#      - 'policies/SQL_Managed_Instance_TDE_protector_should_be_encrypted_with_your_own_key_048248b0-55cd-46da-b1ff-39efd52db260/**'
+#      - 'policies/_Preview_:_Network_traffic_data_collection_agent_should_be_installed_on_Linux_virtual_machines_04c4380f-3fae-46e8-96c9-30193528f602/**'
+#      - 'policies/Azure_API_for_FHIR_should_use_a_customer-managed_key_(CMK)_to_encrypt_data_at_rest_051cba44-2429-45b9-9649-46cec11c7119/**'
+#      - 'policies/Deploy_Diagnostic_Settings_for_Service_Bus_to_Log_Analytics_workspace_04d53d87-841c-4f23-8a5b-21564380b55e/**'
+#      - 'policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**'
+#      - 'policies/Web_Application_Firewall_(WAF)_should_be_enabled_for_Azure_Front_Door_Service_055aa869-bc98-4af8-bafc-23f1ab6ffe2c/**'
+#      - 'policies/Private_endpoint_should_be_enabled_for_PostgreSQL_servers_0564d078-92f5-4f97-8398-b9f58a51f70b/**'
+#      - 'initiatives/se-azure-cs-tst-sec-controls_se-azure-cs-tst-sec-controls/**'
+#      - .github/workflows/manage-azure-policy-f19b75dd.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_f19b75dd}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**
+          policies/Azure_Backup_should_be_enabled_for_Virtual_Machines_013e242c-8828-4970-87b3-ab247555486d/**
+          policies/Cognitive_Services_accounts_should_restrict_network_access_037eea7a-bd0a-46c5-9a66-03aea78705d3/**
+          policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**
+          policies/Audit_Linux_machines_that_have_the_specified_applications_installed_0447bc18-e2f7-4c0d-aa20-bff034275be1/**
+          policies/SQL_Managed_Instance_TDE_protector_should_be_encrypted_with_your_own_key_048248b0-55cd-46da-b1ff-39efd52db260/**
+          policies/_Preview_:_Network_traffic_data_collection_agent_should_be_installed_on_Linux_virtual_machines_04c4380f-3fae-46e8-96c9-30193528f602/**
+          policies/Azure_API_for_FHIR_should_use_a_customer-managed_key_(CMK)_to_encrypt_data_at_rest_051cba44-2429-45b9-9649-46cec11c7119/**
+          policies/Deploy_Diagnostic_Settings_for_Service_Bus_to_Log_Analytics_workspace_04d53d87-841c-4f23-8a5b-21564380b55e/**
+          policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**
+          policies/Web_Application_Firewall_(WAF)_should_be_enabled_for_Azure_Front_Door_Service_055aa869-bc98-4af8-bafc-23f1ab6ffe2c/**
+          policies/Private_endpoint_should_be_enabled_for_PostgreSQL_servers_0564d078-92f5-4f97-8398-b9f58a51f70b/**
+          initiatives/se-azure-cs-tst-sec-controls_se-azure-cs-tst-sec-controls/**
