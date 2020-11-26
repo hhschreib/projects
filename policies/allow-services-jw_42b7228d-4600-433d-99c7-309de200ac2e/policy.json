@@ -1,0 +1,771 @@
+{
+ "properties": {
+  "displayName": "allow-services-jw",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "category": "General",
+   "createdBy": "cc767a1e-6392-409a-a509-6ee67c19db91",
+   "createdOn": "2020-11-25T20:24:54.9295019Z",
+   "updatedBy": "631a55f6-c593-4cc5-8712-6d20106122c6",
+   "updatedOn": "2020-11-26T14:04:41.3831592Z"
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.addons/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.advisor/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.alertsmanagement/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.analysisservices/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.apimanagement/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.appassessment/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.appconfiguration/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.appplatform/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.attestation/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.authorization/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.automation/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.azuredata/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.azurestack/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.batch/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.billing/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.bingmaps/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.blueprint/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.botservice/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.cache/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.capacity/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.cdn/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.certificateregistration/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.changeanalysis/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.classiccompute/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.cognitiveservices/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.commerce/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.compute/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.consumption/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.containerinstance/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.containerregistry/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.containerservice/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.costmanagement/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.costmanagementexports/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.customerlockbox/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.databoxedge/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.databricks/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.datacatalog/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.datafactory/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.datalakeanalytics/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.datalakestore/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.datamigration/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.dataprotection/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.datashare/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.deploymentmanager/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.desktopvirtualization/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.devices/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.deviceupdate/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.devtestlab/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.documentdb/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.domainregistration/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.eventgrid/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.eventhub/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.features/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.hdinsight/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.healthcareapis/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.hybriddata/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.importexport/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.informationprotection/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.insights/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.intelligentitdigitaltwin/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.intune/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.iotcentral/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.iotspaces/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.keyvault/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.kubernetes/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.kubernetesconfiguration/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.kusto/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.labservices/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.logic/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.machinelearning/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.machinelearningservices/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.maintenance/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.managedidentity/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.management/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.maps/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.marketplace/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.marketplaceapps/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.marketplaceordering/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.media/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.migrate/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.netapp/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.network/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.notificationhubs/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.objectstore/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.offazure/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.operationalinsights/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.operationsmanagement/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.peering/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.policyinsights/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.portal/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.powerbi/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.powerbidedicated/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.powerplatform/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.projectbabylon/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.recoveryservices/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.resourcegraph/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.resourcehealth/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.resources/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.saas/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.scheduler/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.search/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.security/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.securitygraph/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.servicebus/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.servicefabric/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.servicefabricmesh/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.serviceshub/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.signalrservice/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.softwareplan/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.solutions/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.sql/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.storage/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.storagesync/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.storsimple/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.streamanalytics/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.subscription/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.support/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.synapse/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.timeseriesinsights/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.virtualmachineimages/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.web/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.windowsesu/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.windowsiot/*"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "like": "microsoft.workloadmonitor/*"
+      }
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/3af6d521-41b3-48a1-bef2-9e1183214926/providers/Microsoft.Authorization/policyDefinitions/42b7228d-4600-433d-99c7-309de200ac2e",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "42b7228d-4600-433d-99c7-309de200ac2e"
+}
